@@ -38,9 +38,3 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 }
 
 @Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    RMA_TIM5_projekatTheme {
-        Greeting("Android")
-    }
-}
