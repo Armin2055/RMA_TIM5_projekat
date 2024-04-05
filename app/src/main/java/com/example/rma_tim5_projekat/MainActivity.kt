@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.rma_tim5_projekat.Screens.AboutUs
 import com.example.rma_tim5_projekat.Screens.HomePage
 import com.example.rma_tim5_projekat.ui.theme.RMA_TIM5_projekatTheme
 
@@ -24,7 +25,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
 
-                    HomePage()
+                    AboutUs();
                 }
             }
         }

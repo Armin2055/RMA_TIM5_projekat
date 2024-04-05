@@ -27,6 +27,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.max
 import androidx.compose.ui.unit.sp
 import com.example.rma_tim5_projekat.R
 
@@ -60,6 +61,12 @@ fun HomePage() {
             Button(onClick = { /*TODO*/ }, colors = ButtonDefaults.buttonColors(Color.Yellow), ) {
               Text(text = "Order now", fontWeight = FontWeight.Bold, fontSize = 20.sp, color = Color.Black)
             }
+        }
+        Row(modifier = Modifier.fillMaxSize() .padding(top = 250.dp),
+            horizontalArrangement = Arrangement.Center){
+
+            Image(modifier = Modifier.size(150.dp), painter = painterResource(id = R.drawable.restorankinglogo), contentDescription = null)
+
         }
     }
 
