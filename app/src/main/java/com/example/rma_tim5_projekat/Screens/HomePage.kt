@@ -58,7 +58,7 @@ fun HomePage() {
                     "At “King”, we redefine fast food with instant gratification for your taste buds.")
         }
         Row(modifier = Modifier.padding(horizontal = 40.dp) .fillMaxWidth(), horizontalArrangement = Arrangement.End ) {
-            Button(onClick = { /*TODO*/ }, colors = ButtonDefaults.buttonColors(Color.Yellow), ) {
+            Button(onClick = { /*TODO*/ }, colors = ButtonDefaults.buttonColors(Color(0xFFFFA500)), ) {
               Text(text = "Order now", fontWeight = FontWeight.Bold, fontSize = 20.sp, color = Color.Black)
             }
         }

@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.rma_tim5_projekat.Screens.AboutUs
 import com.example.rma_tim5_projekat.Screens.HomePage
+import com.example.rma_tim5_projekat.Screens.Order
 import com.example.rma_tim5_projekat.ui.theme.RMA_TIM5_projekatTheme
 
 class MainActivity : ComponentActivity() {
@@ -25,7 +26,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
 
-                    AboutUs();
+                    Order();
                 }
             }
         }
