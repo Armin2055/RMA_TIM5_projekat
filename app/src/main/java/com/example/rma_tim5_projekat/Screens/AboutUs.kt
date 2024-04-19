@@ -6,6 +6,7 @@ import android.icu.text.ListFormatter.Width
 import android.text.style.BackgroundColorSpan
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -30,18 +31,22 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.rma_tim5_projekat.R
+import com.example.rma_tim5_projekat.navigation.Screen
 import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 
 @Composable
-fun AboutUs() {
+fun AboutUs(navController: NavController) {
     Box(
         modifier = Modifier
             .fillMaxSize()
             .background(Color.Red)
     )
     {
-        Image(modifier = Modifier.fillMaxSize(), painter = painterResource(id = R.drawable.aboutusbg), contentDescription = null, contentScale = ContentScale.Crop )
+        Image(modifier = Modifier.fillMaxSize()
+            .clickable { navController.navigate("${Screen.HomePage.route}/${""}") }
+            , painter = painterResource(id = R.drawable.aboutusbg), contentDescription = null, contentScale = ContentScale.Crop )
 
     }
     Column {
@@ -53,7 +58,9 @@ fun AboutUs() {
                 .width(120.dp)
                 .padding(20.dp)
             ) {
-                Image(modifier = Modifier.size(Dp(50F)), painter = painterResource(id = R.drawable.back), contentDescription = null)
+                Image(modifier = Modifier.size(Dp(50F))
+                    .clickable { navController.navigate(Screen.HomePage.route) }
+                    , painter = painterResource(id = R.drawable.back), contentDescription = null)
             }
             Column {
                 Image(modifier = Modifier.size(Dp(150F)), painter = painterResource(id = R.drawable.restorankinglogo), contentDescription = null)

@@ -4,6 +4,7 @@ package com.example.rma_tim5_projekat.Screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -24,18 +25,21 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.rma_tim5_projekat.R
 import com.example.rma_tim5_projekat.components.Artikal
+import com.example.rma_tim5_projekat.navigation.Screen
 
 @Composable
-fun Order() {
+fun Order(navController: NavController) {
     Box(
         modifier = Modifier
             .fillMaxSize()
     )
     {
         Image(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier.fillMaxSize()
+                .clickable { navController.navigate("${Screen.HomePage.route}/${""}") },
             painter = painterResource(id = R.drawable.aboutusbg),
             contentDescription = null,
             contentScale = ContentScale.FillBounds
